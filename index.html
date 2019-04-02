@@ -1,10 +1,11 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
 <style>
 
 body{
 background-image: url('') !important; 
 background-repeat:no-repeat !important; 
-background-position:left !important; 
-background-size:contain;
+background-position:center !important; 
+background-size:cover;
 background-color:#55536e;
 }
 
@@ -17,291 +18,482 @@ background-color:#55536e;
 
 @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
 
-::-webkit-scrollbar {width: 3px; height: 3px;}
-::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar {width: 4px; height: 4px;}
+::-webkit-scrollbar-track {background: #413F5A;}
 ::-webkit-scrollbar-thumb {background: #08071f;}
 
-#box1 {
+#mainbox {
 position:absolute;
 border:2px solid #08071f;
 background-color:rgba(53, 52, 77, 0.81);
-width:25%;
-height:26%;
-left:37.5%;
-top:5%;
+width:50%;
+height:70%;
+top:15%;
+left:25%;
 }
 
-#box2 {
+#title {
 position:absolute;
 border:2px solid #08071f;
-background-color:rgba(53, 52, 77, 0.81);
-width:25%;
-height:26%;
-left:37.5%;
+background-color:#08071f;
+width:50%;
+height:4%;
+top:15%;
+left:25%;
+text-align:center;
+font-size:3vh;
+text-transform:uppercase;
+color:#FFFFFF;
+line-height:1.5;
+font-family: 'Cinzel', serif;
+letter-spacing:5px;
+}
+
+#squarepic1 {
+position:absolute;
+border:2px solid #08071f;
+width:4%;
+height:8%;
+top:21%;
+left:26%;
+background-image: url('https://i.imgur.com/alfjSMH.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#squarepic2 {
+position:absolute;
+border:2px solid #08071f;
+width:4%;
+height:8%;
+top:31%;
+left:26%;
+background-image: url('https://i.imgur.com/TXFQ57q.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#stat1title {
+position:absolute;
+border:2px solid #26253D;
+background-color: #26253D;
+width:4%;
+height:2%;
+top:21%;
+left:31%;
+color:#55536e;
+font-size:1.5vh;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+text-transform:uppercase;
+font-family: 'Righteous', cursive;
+}
+
+#stat1 {
+position:absolute;
+border:2px solid #55536e;
+background-color:#55536e;
+width:4%;
+height:2%;
+top:21%;
+left:35%;
+color:#08071f;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+}
+
+#stat2title {
+position:absolute;
+border:2px solid #26253D;
+background-color: #26253D;
+width:4%;
+height:2%;
+top:24%;
+left:31%;
+color:#55536e;
+font-size:1.5vh;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+text-transform:uppercase;
+font-family: 'Righteous', cursive;
+}
+
+#stat2 {
+position:absolute;
+border:2px solid #55536e;
+background-color:#55536e;
+width:4%;
+height:2%;
+top:24%;
+left:35%;
+color:#08071f;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+}
+
+#stat3title {
+position:absolute;
+border:2px solid #26253D;
+background-color: #26253D;
+width:4%;
+height:2%;
+top:27%;
+left:31%;
+color:#55536e;
+font-size:1.5vh;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+text-transform:uppercase;
+font-family: 'Righteous', cursive;
+}
+
+#stat3 {
+position:absolute;
+border:2px solid #55536e;
+background-color:#55536e;
+width:4%;
+height:2%;
+top:27%;
+left:35%;
+color:#08071f;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+}
+
+#stat4title {
+position:absolute;
+border:2px solid #26253D;
+background-color: #26253D;
+width:4%;
+height:2%;
+top:31%;
+left:31%;
+color:#55536e;
+font-size:1.5vh;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+text-transform:uppercase;
+font-family: 'Righteous', cursive;
+}
+
+#stat4 {
+position:absolute;
+border:2px solid #55536e;
+background-color:#55536e;
+width:4%;
+height:2%;
+top:31%;
+left:35%;
+color:#08071f;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+}
+
+#stat5title {
+position:absolute;
+border:2px solid #26253D;
+background-color: #26253D;
+width:4%;
+height:2%;
+top:34%;
+left:31%;
+color:#55536e;
+font-size:1.5vh;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+text-transform:uppercase;
+font-family: 'Righteous', cursive;
+}
+
+#stat5 {
+position:absolute;
+border:2px solid #55536e;
+background-color:#55536e;
+width:4%;
+height:2%;
+top:34%;
+left:35%;
+color:#08071f;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+}
+
+#stat6title {
+position:absolute;
+border:2px solid #26253D;
+background-color: #26253D;
+width:4%;
+height:2%;
 top:37%;
+left:31%;
+color:#55536e;
+font-size:1.5vh;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+text-transform:uppercase;
+font-family: 'Righteous', cursive;
 }
 
-#box3 {
+#stat6 {
+position:absolute;
+border:2px solid #55536e;
+background-color:#55536e;
+width:4%;
+height:2%;
+top:37%;
+left:35%;
+color:#08071f;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+text-align:center;
+font-size:1.5vh;
+line-height:1.4;
+}
+
+#squarepic3 {
 position:absolute;
 border:2px solid #08071f;
-background-color:rgba(53, 52, 77, 0.81);
-width:25%;
-height:26%;
-left:37.5%;
-top:69%;
-}
-
-#banner1 {
-position:absolute;
-background-color:#08071f;
-padding:1%;
-width:98%;
-height:4%;
-left:0%;
-top:0%;
-color:#ffffff;
-font-size:40%;
-font-family:Cinzel;
-letter-spacing:3px;
-text-transform:uppercase;
-}
-
-#banner2 {
-position:absolute;
-background-color:#08071f;
-padding:1%;
-width:98%;
-height:4%;
-left:0%;
-top:0%;
-color:#ffffff;
-font-size:40%;
-font-family:Cinzel;
-letter-spacing:3px;
-text-transform:uppercase;
-}
-
-#banner3 {
-position:absolute;
-background-color:#08071f;
-padding:1%;
-width:98%;
-height:4%;
-left:0%;
-top:0%;
-color:#ffffff;
-font-size:40%;
-font-family:Cinzel;
-letter-spacing:3px;
-text-transform:uppercase;
-}
-
-#picbox1 {
-position:absolute;
-border:1px solid #08071f;
-width:30%;
-height:85%;
-left:2%;
-top:10.5%;
-background-image: url('http://i.imgur.com/04Ebw2c.png') !important; 
+width:4%;
+height:8%;
+top:21%;
+left:40%;
+background-image: url('https://i.imgur.com/tm7769S.png') !important; 
 background-repeat:no-repeat !important; 
 background-position:center !important; 
 background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
 }
 
-#picbox1:hover {
-background-image: url('https://i.imgur.com/OBsiiWT.jpg') !important; 
+#squarepic4 {
+position:absolute;
+border:2px solid #08071f;
+width:4%;
+height:8%;
+top:31%;
+left:40%;
+background-image: url('https://i.imgur.com/gHtt399.png') !important; 
 background-repeat:no-repeat !important; 
 background-position:center !important; 
 background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+}
+
+#pic {
+position:absolute;
+border:2px solid #08071f;
+width:18%;
+height:42%;
+top:41%;
+left:26%;
 }
 
 #content1 {
 position:absolute;
-padding:2%;
+padding:1%;
 overflow:auto;
-border:1px solid #08071f;
-background-color:#46445e;
-width:44%;
-height:77%;
-left:50%;
-top:10.5%;
-color:#ffffff;
-font-family:Alegreya Sans;
-font-size:60%;
-}
-
-#tabbox1 {
-position:absolute;
-width:20%;
-height:85%;
-top:10.5%;
-left:36%;
-}
-
-#picbox2 {
-position:absolute;
-border:1px solid #08071f;
-width:30%;
-height:85%;
-left:2%;
-top:10.5%;
-background-image: url('https://i.imgur.com/Xh0D708.png') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-}
-
-#picbox2:hover {
-background-image: url('https://i.imgur.com/DuLOh10.jpg') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+border:2px solid #08071f;
+width:27%;
+height:24%;
+top:21%;
+left:45%;
+background-color:#55536e;
+color:#FFFFFF;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
 }
 
 #content2 {
 position:absolute;
-padding:2%;
+padding:1%;
 overflow:auto;
-border:1px solid #08071f;
-background-color:#46445e;
-width:44%;
-height:77%;
-left:50%;
-top:10.5%;
-color:#ffffff;
-font-family:Alegreya Sans;
-font-size:70%;
+border:2px solid #08071f;
+width:27%;
+height:24%;
+top:51%;
+left:45%;
+background-color:#55536e;
+color:#FFFFFF;
+font-size:1.5vh;
+font-family: 'Alegreya Sans', sans-serif;
+}
+
+#tabbox1 {
+position:absolute;
+border:2px solid #08071f;
+background-color: #08071f;
+width:5%;
+height:2%;
+top:81%;
+left:45%;
+text-align:center;
+font-size:1.5vh;
+text-transform:uppercase;
+color:#FFFFFF;
+line-height:1.1;
+font-family: 'Alegreya Sans', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
 }
 
 #tabbox2 {
 position:absolute;
-width:20%;
-height:85%;
-top:10.5%;
-left:36%;
-}
-
-#picbox3 {
-position:absolute;
-border:1px solid #08071f;
-width:30%;
-height:85%;
-left:2%;
-top:10.5%;
-background-image: url('https://i.imgur.com/nurCsxg.png') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
+border:2px solid #08071f;
+background-color: #08071f;
+width:5%;
+height:2%;
+top:81%;
+left:51%;
+text-align:center;
+font-size:1.5vh;
+text-transform:uppercase;
+color:#FFFFFF;
+line-height:1.1;
+font-family: 'Alegreya Sans', sans-serif;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
-}
-
-#picbox3:hover {
-background-image: url('https://i.imgur.com/MoqR8jZ.png') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-}
-
-#content3 {
-position:absolute;
-padding:2%;
-overflow:auto;
-border:1px solid #08071f;
-background-color:#46445e;
-width:44%;
-height:77%;
-left:50%;
-top:10.5%;
-color:#ffffff;
-font-family:Alegreya Sans;
-font-size:70%;
 }
 
 #tabbox3 {
 position:absolute;
-width:20%;
-height:85%;
-top:10.5%;
-left:36%;
+border:2px solid #08071f;
+background-color: #08071f;
+width:5%;
+height:2%;
+top:81%;
+left:57%;
+text-align:center;
+font-size:1.5vh;
+text-transform:uppercase;
+color:#FFFFFF;
+line-height:1.1;
+font-family: 'Alegreya Sans', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+border:2px solid #08071f;
+background-color: #08071f;
+width:5%;
+height:2%;
+top:81%;
+left:63%;
+text-align:center;
+font-size:1.5vh;
+text-transform:uppercase;
+color:#FFFFFF;
+line-height:1.1;
+font-family: 'Alegreya Sans', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+border:2px solid #08071f;
+background-color: #08071f;
+width:5%;
+height:2%;
+top:81%;
+left:69%;
+text-align:center;
+font-size:1.5vh;
+text-transform:uppercase;
+color:#FFFFFF;
+line-height:1.1;
+font-family: 'Alegreya Sans', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover,#tabbox2:hover,#tabbox3:hover,#tabbox4:hover,#tabbox5:hover {
+background-color: #26253D;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
 }
 
 .tabs {
 display: block;
-background-color:#08071f;
-padding:1%;
-width:98%;
-height:5%;
-margin-top:40%;
-text-align:left;
-font-size: 35%;
-color: #ffffff;
-font-family:Cinzel;
-letter-spacing:3px;
-text-transform:uppercase;
+border:2px solid rgba(0,0,0,0);
+width:100%;
+height:100%;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
 }
 
 .tabs:hover {
-margin-left:-15%;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
 }
 
-#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9 {
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10,#tab11,#tab12,#tab13,#tab14,#tab15,#tab16,#tab17,#tab18,#tab19,#tab20 {
 display:none;
 }
 
 a {
-color:#999999;
+color:#000000;
 }
 
 i {
-color:#999999;
-font-size:80%;
+color:#000000;
 }
 
 h1 {
-color: #ffffff;
+color: #55536e;
 text-align:center;
-font-family: Righteous;
-font-size: 90%;
-border-bottom: 2px dotted #ffffff;
+font-size: 2vh;
+border-left: 10px solid #73718C;
+border-right: 10px solid #73718C;
+font-family: 'Righteous', cursive;
+background-color:#26253D;
+letter-spacing:5px;
 }
 
 b {
-font-size: 80%;
-color:#888888;
-font-family:Righteous;
+color:#08071f;
+font-family: 'Righteous', cursive;
+text-transform:uppercase;
+font-size:1.5vh;
 }
 
 </style>
 
 <style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
 <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel|Righteous" rel="stylesheet">
-<script>function changeNavigation(id) {document.getElementById('content1').innerHTML=document.getElementById(id).innerHTML}</script>
-<script>function changeNavigation1(id) {document.getElementById('content2').innerHTML=document.getElementById(id).innerHTML}</script>
-<script>function changeNavigation2(id) {document.getElementById('content3').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation(id) {document.getElementById('title').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('pic').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation2(id) {document.getElementById('content1').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation3(id) {document.getElementById('content2').innerHTML=document.getElementById(id).innerHTML}</script>
 
 <div class="snowflakes" aria-hidden="true">
   <div class="snowflake">
@@ -342,225 +534,255 @@ font-family:Righteous;
   </div>
 </div>
 
-<div id="box1">
-<div id="banner1">
-The Woman, The Being
+<div id="mainbox"></div>
+<div id="title">
+❅❆❅ The Woman, The Being ❅❆❅
 </div>
-<div id="picbox1">
+
+<a target="target=_blank" href="https://i.imgur.com/ZXmnC6h.jpg"><div id="squarepic1"></div></a>
+<a target="target=_blank" href="https://i.imgur.com/VzSQHgj.jpg"><div id="squarepic2"></div></a>
+<div id="stat1title">
+Name:
 </div>
-<div id="tabbox1">
-<span class="tabs" onClick="changeNavigation ('tab1')">Physical</span>
-<span class="tabs" onClick="changeNavigation ('tab2')">Mental</span>
-<span class="tabs" onClick="changeNavigation ('tab3')">Racials</span>
+<div id="stat1">
+North
 </div>
+<div id="stat2title">
+Age:
+</div>
+<div id="stat2">
+Unknown
+</div>
+<div id="stat3title">
+Gender:
+</div>
+<div id="stat3">
+Female
+</div>
+<div id="stat4title">
+Species:
+</div>
+<div id="stat4">
+Primordial
+</div>
+<div id="stat5title">
+Height:
+</div>
+<div id="stat5">
+6'0"
+</div>
+<div id="stat6title">
+Weight:
+</div>
+<div id="stat6">
+130 lbs.
+</div>
+<a target="target=_blank" href="https://i.imgur.com/dTE7aM8.jpg"><div id="squarepic3"></div></a>
+<a target="target=_blank" href="https://i.imgur.com/JEp3LjW.png"><div id="squarepic4"></div></a>
+
+<a target="target=_blank" href="https://i.imgur.com/eJFNfbH.jpg"><div id="pic">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/NhuzCeh.png"/>
+</div></a>
+
 <div id="content1">
-<h1>Basic Information</h1>
-<b>Name:</b> North<br>
-<b>Age:</b> Unknown<br>
-<b>Birthdate:</b> Unknown<br>
-<b>Gender:</b> Female<br>
-<b>Sexuality:</b> Demisexual<br>
-<b>Species:</b> Unknown<br>
-<b>Race:</b> Caucasian<br>
-<b>Occupation:</b> Wandering Soul<br>
-<b>Height:</b> 6'0"<br>
-<b>Weight:</b> 130 lbs.
-</div>
-</div>
-<div id="box2">
-<div id="banner2">
-A Past Shrouded in Secrecy
-</div>
-<div id="picbox2">
-</div>
-<div id="tabbox2">
-<span class="tabs" onClick="changeNavigation1 ('tab4')">Lore</span>
-<span class="tabs" onClick="changeNavigation1 ('tab5')">Phoenix</span>
-<span class="tabs" onClick="changeNavigation1 ('tab6')">Crescent</span>
-</div>
-<div id="content2">
-<h1>History & Birth</h1>
-North's existence was planned from the start, in fact, before she was even conceived in the womb she was known as the most vital piece of "Project Eclipse." When the monarchs of the Day Clan and Night Clan expanded the number of people within their domain--by planting the Trees and creating the Guardians--the segregation of their people only deepened. Their people did finally see each other as equals, but they refused to intermingle and wanted to stay in the familiarity of their own Clans. In a desperate attempt to create harmony, the monarchs were officially married and together they created The Council of Eclipse which held a representative from each major race within both Clans who spoke for their respective people.
+<h1>Appearance</h1>
+<b>Shape (Head):</b><br>
+While she has a strong jaw, high cheekbones, and her face itself can be considered on the more narrow side, she still retains a soft and smooth roundess to its entirety.
 <br><br>
-Even though the Council was a success and managed to bring about a nearly democratic system, the segregation did not disperse. Day Clan mages refused to use Night Clan magic, and vice versa. They would only sit on certain sides of the meeting halls, refuse to mingle with one another, and the rift only continued to grow. The monarchs did their best to encourage a sense of unity, bringing people together, encouraging matrimony and extending families and magical capabilities beyond one singular Clan. It became evident rather quickly that in order to make their dreams come true, they needed a third party, an advocate to act as the inbetween. They would need someone to be born of both Clans and practice magic from both sides, and thus the married couple conceived a child. A successor to the crown, meant to bring about a new era of peace and prosperity.
+<b>Ears (Head):</b><br>
+Pointed in an elvish fashion, typically sticking out between the strands of her long hair regardless of how she wears it.
 <br><br>
-Unfortunately, the worlds they resided in were riddled with war. Humans and mortal beings fought magical creatures in an act of rebellion, and a baby Princess was a vulnerable asset that could easily be turned into leverage. Traitors lurked every palace hallway, bounties and rewards for capture were constantly on the newborn's head. From her birth, she was in constant danger, and her loving parents feared the worst; not only would she grow up in a harmful environment but her life might corrupt her and ruin the dream forever. Desperate to keep their child safe, they did all they could to raise her until she would be able to survive on her own. She was discarded in a place where humans could not survive; an icy tundra in the far north where days lasted months and nights lasted years. Her memory and her extraordinary powers were sealed away, giving her the chance to start as a fresh and innocent being, and limiting her to only learning two kinds of magic, albeit magic of her choice.
+<b>Hair (Head):</b><br>
+Long and white with natural waves that gently tumble down her shoulders, the tips brushing just beneath her shoulder-blades. If she were to wear it straight, it would be an inch or too longer than it appears. 
 <br><br>
-Worried that her isolation would do more harm than good, the monarchs sought out a powerful being, loyal to no one other than himself, and begged him to care for the child, and teach her. They were incredibly lucky he agreed, and even luckier he kept to their terms. Never once did the man reveal to North her hidden past, and yet he knew it all.
-</div>
-</div>
-<div id="box3">
-<div id="banner3">
-The Powers of a Forgotten Princess
-</div>
-<div id="picbox3">
-</div>
-<div id="tabbox3">
-<span class="tabs" onClick="changeNavigation2 ('tab7')">Magic</span>
-<span class="tabs" onClick="changeNavigation2 ('tab8')">Cryo</span>
-<span class="tabs" onClick="changeNavigation2 ('tab9')">Kinetics</span>
-</div>
-<div id="content3">
-<h1>Inventory</h1>
-<b>The Broken Greatsword</b><br>
-North's only true possession; a strange magical artifact left with her to give her a means of defending herself, although, she has no memory of its origin. In its natural state it is merely the hilt of a fancy greatsword, blade seemingly broken off and discarded by some unseen force. When activated, however, it grows a five-and-a-half foot ethereal looking blade that seems to be made of some strange mist but still has a solid durability of diamond. Things of lesser durability that come in contact with the blade are frozen into a brittle fragile state that can easily be shattered, while things of equal durability grow incredibly cold--to the point of burning bare flesh--and produces a layer of frost over the point of contact.
-<br>
-The blade possesses a secondary ability that excessively vibrates the strange icy substance of its make-up to allow it to cut through things of equal durability, but this ability drains North's mana and cannot be kept active for long periods of time.
-<br>
-Whether in hilt mode or sword mode it seems to be able to act as a catalyst for its owner's spells, and even gives them a small buff. While massive in size, (five and a half feet long, two feet wide, four inches thick) the only weight in this peculiar weapon resides in the hilt, allowing it to have some semblence of weight while still being rather light.
-</div>
-</div>
-
-
-<div id="tab1">
-<h1>Head</h1>
-<b>Shape:</b><br>
-While she has a strong jaw, high cheekbones, and her face itself can be considered on the more narrow side, she still retains a soft and smooth roundess to its entirety.<br>
-<b>Ears:</b><br>
-Pointed in an elvish fashion, typically sticking out between the strands of her long hair regardless of how she wears it.<br>
-<b>Hair:</b><br>
-Long and white with natural waves that gently tumble down her shoulders, the tips brushing just beneath her shoulder-blades. If she were to wear it straight, it would be an inch or too longer than it appears.
+<b>Eyes (Face):</b><br>
+Crystal clear blue that constantly glows with an inhuman energy. If she has pupils, they are not visible to the naked eye, and blend entirely in with the strange colors of her irises.
 <br><br>
-<h1>Face</h1>
-<b>Eyes:</b><br>
-Crystal clear blue that constantly glows with an inhuman energy. If she has pupils, they are not visible to the naked eye, and blend entirely in with the strange colors of her irises.<br>
-<b>Brow:</b><br>
-Slender and thin, arching over her eyes perfectly, as white as the hair on her head.<br>
-<b>Nose:</b><br>
-Small and rather cute, the tip is ever so slightly upturned. The angular quality of her nose is rather noticeable and only adds to her strangely innocent but regal appearance.<br>
-<b>Mouth:</b><br>
-Lips of a soft pink that certainly can smile but are most often pressed into a thin line of concentration. While full and enticing, they are nothing compared to the array of perfect white teeth hiding behind them.
+<b>Brow (Face):</b><br>
+Slender and thin, arching over her eyes perfectly, as white as the hair on her head.
 <br><br>
-<h1>Body</h1>
-<b>Complexion:</b><br>
-Skin that is soft and smooth stretches evenly and perfectly over her feminine figure. While very pale white--almost an inhuman shade--it is not at all sickly and in fact believed to be rather healthy.<br>
-<b>Figure:</b><br>
-Very thin and athletic while still retaining the hourglass shape so common between females. Hard muscles lies beneath her soft skin, and only adds to her shape, while attributes such as her bust and rear are still evident but rather average in size and shape. She is very lightweight, and thin, but not unhealthily so.<br>
-<b>Physical Age:</b><br>
+<b>Nose (Face):</b><br>
+Small and rather cute, the tip is ever so slightly upturned. The angular quality of her nose is rather noticeable and only adds to her strangely innocent but regal appearance.
+<br><br>
+<b>Mouth (Face):</b><br>
+Lips of a soft pink that certainly can smile but are most often pressed into a thin line of concentration. While full and enticing, they are nothing compared to the array of perfect white teeth hiding behind them. 
+<br><br>
+<b>Complexion (Body):</b><br>
+Skin that is soft and smooth stretches evenly and perfectly over her feminine figure. While very pale white--almost an inhuman shade--it is not at all sickly and in fact believed to be rather healthy.
+<br><br>
+<b>Figure (Body):</b><br>
+Very thin and athletic while still retaining the hourglass shape so common between females. Hard muscles lies beneath her soft skin, and only adds to her shape, while attributes such as her bust and rear are still evident but rather average in size and shape. She is very lightweight, and thin, but not unhealthily so.
+<br><br>
+<b>Physical Age (Body):</b><br>
 Her youthful face and figure suggest the female is--at least physically--near her early to mid twenties in age. Her true age and birthdate are intentionally hidden, however, even from her.
 </div>
-
-<div id="tab2">
-<h1>Personality</h1>
-Quiet but most certainly not timid, North is an observer. She watches and studies before acting, thinking her own actions through thoroughly beforehand. While this does slow her down and leave her vulnerable in situations that require quick thinking and decision making, it is likely that if pressured she will attempt to escape the danger first before embracing and dealing with it head on. Regardless, she is a seemingly compassionate being that is more than capable of putting others before herself if she deems them worthy of her time and efforts. This is a courtesy extended rather often, and usually leads to others taking advantage of her. Naturally, they only succeed in doing so once. Either North learns not to trust them, or she cuts them down where they stand for their betrayal.
+<div id="content2">
+<h1>Mentality</h1>
+<b>Personality:</b><br>
+Quiet but most certainly not timid, North is an observer. She watches and studies before acting, thinking her own actions through thoroughly beforehand. While this does slow her down and leave her vulnerable in situations that require quick thinking and decision making, it is likely that if pressured she will attempt to escape the danger first before embracing and dealing with it head on. Regardless, she is a seemingly compassionate being that is more than capable of putting others before herself if she deems them worthy of her time and efforts. This is a courtesy extended rather often, and usually leads to others taking advantage of her. Naturally, they only succeed in doing so once. Either North learns not to trust them, or she cuts them down where they stand for their betrayal. 
 <br><br>
-<h1>Moral Alignment</h1>
+<b>Moral Alignment:</b><br>
 Her love for all nature based life, and fast willingness to sacrifice her own needs for the needs of nature, may often lead one to believe her alignment to be "pure" or "true" good. However, North can also be cruel and formiddable. If her kindness is misused in any way, the culprit will often suffer, and most likely die. When it comes to the battlefield she is ruthless, almost to a fault, and tends to go too far. Her emotions and personal values often control her, leading her to be a true neutral being. Until she finds her memories or her purpose, she lives only for herself and her teacher.
 </div>
 
-<div id="tab3">
-<h1>Racial Abilities</h1>
-<b>Enhanced Strength</b><br>
-Physical strength three times that of the average human. (x3)
-<br><br>
-<b>Enhanced Speed</b><br>
-Physical speed, including mental information processing and reaction time, three times that of the average human. (x3)
-<br><br>
-<b>Temperature Adaptation</b><br>
-Her natural body temperature can easily adjust to the temperature of the terrain around her, adapting to allow survival with minimal clothing or magic. This ability does, however, take time to fully settle, and thus sudden fluctuations in temperature are a huge weakness.
-<br><br>
-<b>Ageless</b><br>
-Her body does not age, and further exploring this strange ability has shown she cannot die from any natural causes (whether it be sickness, poison, or any variation). She is still just as vulnerable to magical ailments and magically enhanced natural ailments as anyone else, however.
-<br><br>
-<b>Bone Density</b><br>
-It appears that North's bone structure is as durable as Cobalt, but when broken leaks small amounts of mana and takes twice as long to heal (comparison to the average human). This also means that if her bones are healed with Faith magic, Faith Sickness lasts her twice as long.
-<br><br>
-<b>Learning & Retaining Information</b><br>
-North can learn new things twice as fast as the average human, and it is much easier for her to store new knowledge in her long term memory. This is useful for things such as memorizing faces, names, patterns, or learning whole new languages.
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1');changeNavigation1 ('tab2');changeNavigation2 ('tab3');changeNavigation3 ('tab4')">Details</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab5');changeNavigation1 ('tab6');changeNavigation2 ('tab7');changeNavigation3 ('tab8')">Lore</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab9');changeNavigation1 ('tab10');changeNavigation2 ('tab11');changeNavigation3 ('tab12')">Racials</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab13');changeNavigation1 ('tab14');changeNavigation2 ('tab15');changeNavigation3 ('tab16')">Magic</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab17');changeNavigation1 ('tab18');changeNavigation2 ('tab19');changeNavigation3 ('tab20')">???</span>
 </div>
 
+<div id="tab1">
+❅❆❅ The Woman, The Being ❅❆❅
+</div>
+<div id="tab2">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/NhuzCeh.png"/>
+</div>
+<div id="tab3">
+<h1>Appearance</h1>
+<b>Shape (Head):</b><br>
+While she has a strong jaw, high cheekbones, and her face itself can be considered on the more narrow side, she still retains a soft and smooth roundess to its entirety.
+<br><br>
+<b>Ears (Head):</b><br>
+Pointed in an elvish fashion, typically sticking out between the strands of her long hair regardless of how she wears it.
+<br><br>
+<b>Hair (Head):</b><br>
+Long and white with natural waves that gently tumble down her shoulders, the tips brushing just beneath her shoulder-blades. If she were to wear it straight, it would be an inch or too longer than it appears. 
+<br><br>
+<b>Eyes (Face):</b><br>
+Crystal clear blue that constantly glows with an inhuman energy. If she has pupils, they are not visible to the naked eye, and blend entirely in with the strange colors of her irises.
+<br><br>
+<b>Brow (Face):</b><br>
+Slender and thin, arching over her eyes perfectly, as white as the hair on her head.
+<br><br>
+<b>Nose (Face):</b><br>
+Small and rather cute, the tip is ever so slightly upturned. The angular quality of her nose is rather noticeable and only adds to her strangely innocent but regal appearance.
+<br><br>
+<b>Mouth (Face):</b><br>
+Lips of a soft pink that certainly can smile but are most often pressed into a thin line of concentration. While full and enticing, they are nothing compared to the array of perfect white teeth hiding behind them. 
+<br><br>
+<b>Complexion (Body):</b><br>
+Skin that is soft and smooth stretches evenly and perfectly over her feminine figure. While very pale white--almost an inhuman shade--it is not at all sickly and in fact believed to be rather healthy.
+<br><br>
+<b>Figure (Body):</b><br>
+Very thin and athletic while still retaining the hourglass shape so common between females. Hard muscles lies beneath her soft skin, and only adds to her shape, while attributes such as her bust and rear are still evident but rather average in size and shape. She is very lightweight, and thin, but not unhealthily so.
+<br><br>
+<b>Physical Age (Body):</b><br>
+Her youthful face and figure suggest the female is--at least physically--near her early to mid twenties in age. Her true age and birthdate are intentionally hidden, however, even from her.
+</div>
 <div id="tab4">
+<h1>Mentality</h1>
+<b>Personality:</b><br>
+Quiet but most certainly not timid, North is an observer. She watches and studies before acting, thinking her own actions through thoroughly beforehand. While this does slow her down and leave her vulnerable in situations that require quick thinking and decision making, it is likely that if pressured she will attempt to escape the danger first before embracing and dealing with it head on. Regardless, she is a seemingly compassionate being that is more than capable of putting others before herself if she deems them worthy of her time and efforts. This is a courtesy extended rather often, and usually leads to others taking advantage of her. Naturally, they only succeed in doing so once. Either North learns not to trust them, or she cuts them down where they stand for their betrayal. 
+<br><br>
+<b>Moral Alignment:</b><br>
+Her love for all nature based life, and fast willingness to sacrifice her own needs for the needs of nature, may often lead one to believe her alignment to be "pure" or "true" good. However, North can also be cruel and formiddable. If her kindness is misused in any way, the culprit will often suffer, and most likely die. When it comes to the battlefield she is ruthless, almost to a fault, and tends to go too far. Her emotions and personal values often control her, leading her to be a true neutral being. Until she finds her memories or her purpose, she lives only for herself and her teacher.
+</div>
+
+<div id="tab5">
+❅❆❅ A Past of Secrecy ❅❆❅
+</div>
+<div id="tab6">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/KzDoLsj.png"/>
+</div>
+<div id="tab7">
+<h1>History & Birth</h1>
+North's existence was planned from the start, in fact, before she was even conceived in the womb she was known as the most vital piece of "Project Eclipse." When the monarchs of the Day Clan and Night Clan expanded the number of people within their domain--by planting the Trees and creating the Guardians--the segregation of their people only deepened. Their people did finally see each other as equals, but they refused to intermingle and wanted to stay in the familiarity of their own Clans. In a desperate attempt to create harmony, the monarchs were officially married and together they created The Council of Eclipse which held a representative from each major race within both Clans who spoke for their respective people. 
+<br><br>
+Even though the Council was a success and managed to bring about a nearly democratic system, the segregation did not disperse. Day Clan mages refused to use Night Clan magic, and vice versa. They would only sit on certain sides of the meeting halls, refuse to mingle with one another, and the rift only continued to grow. The monarchs did their best to encourage a sense of unity, bringing people together, encouraging matrimony and extending families and magical capabilities beyond one singular Clan. It became evident rather quickly that in order to make their dreams come true, they needed a third party, an advocate to act as the inbetween. They would need someone to be born of both Clans and practice magic from both sides, and thus the married couple conceived a child. A successor to the crown, meant to bring about a new era of peace and prosperity. 
+<br><br>
+Unfortunately, the worlds they resided in were riddled with war. Humans and mortal beings fought magical creatures in an act of rebellion, and a baby Princess was a vulnerable asset that could easily be turned into leverage. Traitors lurked every palace hallway, bounties and rewards for capture were constantly on the newborn's head. From her birth, she was in constant danger, and her loving parents feared the worst; not only would she grow up in a harmful environment but her life might corrupt her and ruin the dream forever. Desperate to keep their child safe, they did all they could to raise her until she would be able to survive on her own. She was discarded in a place where humans could not survive; an icy tundra in the far north where days lasted months and nights lasted years. Her memory and her extraordinary powers were sealed away, giving her the chance to start as a fresh and innocent being, and limiting her to only learning two kinds of magic, albeit magic of her choice. 
+<br><br>
+Worried that her isolation would do more harm than good, the monarchs sought out a powerful being, loyal to no one other than himself, and begged him to care for the child, and teach her. They were incredibly lucky he agreed, and even luckier he kept to their terms. Never once did the man reveal to North her hidden past, and yet he knew it all.
+</div>
+<div id="tab8">
 <h1>Birth of the Clans</h1>
-The Day Clan and Night Clan were formed as resistance groups against a powerful force known as Will and his many children. Will was a limitless god-like being full of greed and misplaced hatred, believing humans were a parasite to life. He bred with the best they had to offer, producing superhuman warriors with extraordinary abilities designed to massacre them and wipe them from time and space completely until they were nothing more than a memory. His equals, Fate and Destiny, founders and rulers of the Clans, gave themselves physical forms and brought together entire armies to fight against his demonic children. As a result of their ability to work together and bond on the battlefield, the Clans were able to destroy Will's people and even seal him away so he could not touch their planes of existence ever again. During the long and brutal process, the Clans became a solid people, and their two monarchs fell in love.
+The Day Clan and Night Clan were formed as resistance groups against a powerful force known as Will and his many children. Will was a limitless god-like being full of greed and misplaced hatred, believing humans were a parasite to life. He bred with the best they had to offer, producing superhuman warriors with extraordinary abilities designed to massacre them and wipe them from time and space completely until they were nothing more than a memory. His equals, Fate and Destiny, founders and rulers of the Clans, gave themselves physical forms and brought together entire armies to fight against his demonic children. As a result of their ability to work together and bond on the battlefield, the Clans were able to destroy Will's people and even seal him away so he could not touch their planes of existence ever again. During the long and brutal process, the Clans became a solid people, and their two monarchs fell in love. 
 <br><br>
 <h1>Planting of the Trees</h1>
-If Fate and Destiny never began this project and gave these realms access to magic, they never would have won the battle against Will. Together, the two entities created "gateways" to their own native realities in the forms of literal trees. Each individual tree opened the possibility of obtaining and learning a certain kind of magic, and while Fate and Destiny themselves could practice a mass multitude of these trees, they were higher beings with a much higher capacity than the magical beasts and humanoids they created the gateways for. Typically, the lesser beings could only harnass two separate types of magic, at the most.
+If Fate and Destiny never began this project and gave these realms access to magic, they never would have won the battle against Will. Together, the two entities created "gateways" to their own native realities in the forms of literal trees. Each individual tree opened the possibility of obtaining and learning a certain kind of magic, and while Fate and Destiny themselves could practice a mass multitude of these trees, they were higher beings with a much higher capacity than the magical beasts and humanoids they created the gateways for. Typically, the lesser beings could only harnass two separate types of magic, at the most. 
 <br><br>
 <h1>The Fall</h1>
 Mankind eventually forgot the trees were merely a kindness extended to them, to save their existence and prolong their short lives. They began to misuse the magic in horrible dishonorable ways, forcing the two monarchs to cut them off. They did so by taking pieces of the trees and creating Guardians out of these pieces, entirely new magical beings that existed only to protect what they were born from, and keep those who used their magic in line. This began an allout war between humans and magical creatures, especially the Guardians themselves. This is the war that forced the monarchs to send their daughter into hiding.
 </div>
 
-<div id="tab5">
-<h1>The Sun</h1>
-<img style="width:45%;" align="left" src="https://i.imgur.com/bZfePHB.jpg"/>
-<b>Name:</b> Fate<br>
-<b>Alias:</b> Phoenix<br>
-<br>
-When Fate fashioned for himself a physical body, it is said he took a piece of the sun to do so. His physical appearance reflects this greatly as his golden hair often glows with intense energy and dances as though alight with flames, and piercing red eyes burn like hot coals as they peer into the soul. His skin is rather tanned, suggesting he spends a lot of time in the light as well.
+<div id="tab9">
+❅❆❅ The Entity's Benefits ❅❆❅
+</div>
+<div id="tab10">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/bZu3Gsx.png"/>
+</div>
+<div id="tab11">
+<h1>Primordial Racials</h1>
+<b>Ageless</b><br>
+Her body does not age, and further exploring this strange ability has shown she cannot die from any natural causes (whether it be sickness, poison, or any variation). She is still just as vulnerable to magical ailments and magically enhanced natural ailments as anyone else, however. 
 <br><br>
-The Magic Trees that were planted by Phoenix and considered Day Clan magic are:<br>
-<li>Mana Manipulation</li>
-<li>Faith</li>
-<li>Conjuration</li>
-<li>Stigmatism</li>
-<li>Enchantment</li>
-<li>Elementalism: Pyromancy</li>
-<li>Elementalism: Geomancy</li>
-<li>Elementalism: Aeromancy</li>
-<li>Ritualism</li>
-<li>Paganism</li>
-<li>Magus Manatism</li>
-<li>Unity Summoning</li>
-<li>Forcient: Magnetism</li>
-<li>Forcient: Transmutation</li>
-<li>Forcient: Kinetics</li>
-<li>Radiance: Photokinesis</li>
-<li>Psionic Magic</li>
-<li>Caligraphism</li>
-<li>Puppetry</li>
-<li>Combine</li>
+<b>Learning & Retaining Information</b><br>
+North can learn new things twice as fast as the average human, and it is much easier for her to store new knowledge in her long term memory. This is useful for things such as memorizing faces, names, patterns, or learning whole new languages.
+</div>
+<div id="tab12">
+<h1>North's Racials</h1>
+<b>Enhanced Strength</b><br>
+Physical strength three times that of the average human. (x3) 
 <br><br>
-(Note: Some trees may be listed for both Clans, this means those trees are equally Day Clan and Night Clan, not one or the other)
+<b>Enhanced Speed</b><br>
+Physical speed, including mental information processing and reaction time, three times that of the average human. (x3) 
+<br><br>
+<b>Temperature Adaptation</b><br>
+Her natural body temperature can easily adjust to the temperature of the terrain around her, adapting to allow survival with minimal clothing or magic. This ability does, however, take time to fully settle, and thus sudden fluctuations in temperature are a huge weakness. 
+<br><br>
+<b>Bone Density</b><br>
+It appears that North's bone structure is as durable as Cobalt, but when broken leaks small amounts of mana and takes twice as long to heal (comparison to the average human). This also means that if her bones are healed with Faith magic, Faith Sickness lasts her twice as long. 
 </div>
 
-<div id="tab6">
-<h1>The Moon</h1>
-<img style="width:45%;" align="left" src="https://i.imgur.com/5WRfKE0.jpg"/>
-<b>Name:</b> Destiny<br>
-<b>Alias:</b> Crescent<br>
-<br>
-When Destiny fashioned for herself a physical body, it is said she took a piece of the moon to do so. Her physical appearance reflects this greatly, as her hair looks to be a live feed of the night sky, showing constellations, planets, and various shootings stars in its floor-length locks, while her pale irises seem to be reflections of the moon themselves. Her skin is very pale, suggesting that if any light touches her it is likely moonlight.
-<br><br>
-The Magic Trees that were planted by Crescent and considered Night Clan magic are:<br>
-<li>Mana Manipulation</li>
-<li>Bardism</li>
-<li>Cultism</li>
-<li>Druidism</li>
-<li>Deception</li>
-<li>Spiritualism</li>
-<li>Enchantment</li>
-<li>Elementalism: Aquamancy</li>
-<li>Elementalism: Cryomancy</li>
-<li>Elementalism: Electromancy</li>
-<li>Ritualism</li>
-<li>Necromancy</li>
-<li>Magus Manatism</li>
-<li>Unity Summoning</li>
-<li>Wizardry/Witchcraft</li>
-<li>Radiance: Umbrakinesis</li>
-<li>Psionic Magic</li>
-<li>Caligraphism</li>
-<li>Puppetry</li>
-<li>Combine</li>
-<br><br>
-(Note: Some trees may be listed for both Clans, this means those trees are equally Day Clan and Night Clan, not one or the other)
+<div id="tab13">
+❅❆❅ Powers of a Forgotten Princess ❅❆❅
 </div>
-
-<div id="tab7">
-<h1>The Possibilities</h1>
-While born from their physical forms, North is still quite literally a being made of Phoenix and Crescent's essences, and thus makes her racially very similar to them. Normally she would be able to access any and all magic trees they are able to themselves, completely on a whim. However, thanks to the limitations placed on her by the same seal that hides away her memory and her true identity (scrambles detection spells and allows her to unknowingly slip under radars) has forced her to progress like any other mortal or magical being. She must start from the beginning and work her way up.
+<div id="tab14">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/6TYYczQ.png"/>
+</div>
+<div id="tab15">
+<h1>Magical Affinities</h1>
+While born from their physical forms, North is still quite literally a being made of Phoenix and Crescent's essences, and thus makes her racially very similar to them. Normally she would be able to access any and all magic trees they are able to themselves, completely on a whim. However, thanks to the limitations placed on her by the same seal that hides away her memory and her true identity (scrambles detection spells and allows her to unknowingly slip under radars) has forced her to progress like any other mortal or magical being. She must start from the beginning and work her way up. 
 <br><br>
 North's teacher does not use magic, he uses a powerful energy native to his race and his homeworld, but he has adapted his own methods into teachings to help educate her and help her gain power. He specializes in extreme cold, ice, and movement, which he has translated into Cryomancy and Kinetics for her sake.
-</div>
-
-<div id="tab8">
-<h1>Elementalism: Cryomancy</h1>
+<br><br>
+<h1>Cryomancy</h1>
 <i>"Often seen as the most primal or basic form of magic, Elementalists tap into one of six different elements to produce their magic. Each possesses a different mana type, and may use their spells to generate their chosen element. Cryomancy has control over ice, cold, and snow."</i>
-</div>
-
-<div id="tab9">
+<br><br>
 <h1>Forcient: Kinetics</h1>
 <i>"Forcient is a tree which focuses on the physical constants and laws of the universe, and how one may manipulate these constants and laws to suit their agenda. Forcient is divided into three different branches, each of which controls a small array of forces. A Kinetics mage focuses primarily on the forces of movement; the manipulation of kinetic and potential energy are their specialty. However, many mages may find they have gained access to the manipulation of pressure, and other forces outside of gravity and magnetism. A Kinetics mage's magic is very special- while it is magic, their spells often inflict physical damage."</i>
+</div>
+<div id="tab16">
+<h1>Magical Tools</h1>
+<b>The Broken Greatsword</b><br>
+North's only true possession; a strange magical artifact left with her to give her a means of defending herself, although, she has no memory of its origin. In its natural state it is merely the hilt of a fancy greatsword, blade seemingly broken off and discarded by some unseen force. When activated, however, it grows a five-and-a-half foot ethereal looking blade that seems to be made of some strange mist but still has a solid durability of diamond. Things of lesser durability that come in contact with the blade are frozen into a brittle fragile state that can easily be shattered, while things of equal durability grow incredibly cold--to the point of burning bare flesh--and produces a layer of frost over the point of contact. 
+<br>
+The blade possesses a secondary ability that excessively vibrates the strange icy substance of its make-up to allow it to cut through things of equal durability, but this ability drains North's mana and cannot be kept active for long periods of time. 
+<br>
+Whether in hilt mode or sword mode it seems to be able to act as a catalyst for its owner's spells, and even gives them a small buff. While massive in size, (five and a half feet long, two feet wide, four inches thick) the only weight in this peculiar weapon resides in the hilt, allowing it to have some semblence of weight while still being rather light.
+</div>
+
+<div id="tab17">
+❅❆❅ ??? ❅❆❅
+</div>
+<div id="tab18">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/LuZVs3g.png"/>
+</div>
+<div id="tab19">
+???
+</div>
+<div id="tab20">
+???
 </div>
 
 <embed style="height: 0%; width: 0%;"src="North.mp3" autostart="true" loop="true">
